@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritika Mahajan | DeepTech Innovator & Ecosystem Builder</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a', // Slate 900
+                        accent: '#2563eb', // Blue 600
+                    },
+                    animation: {
+                        blob: "blob 7s infinite",
+                    },
+                    keyframes: {
+                        blob: {
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                            "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Glassmorphism Utilities */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #7e22ce 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Progress Bar */
+        #progress-bar {
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(to right, #2563eb, #7e22ce);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            transition: width 0.1s;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-slate-900 relative">
+
+    <!-- Scroll Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-nav border-b border-white/50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center group cursor-pointer">
+                    <a href="#" class="font-serif text-2xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">RM<span class="text-blue-600 group-hover:text-slate-900">.</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#experience" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">Experience</a>
+                    <a href="#education" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">Education</a>
+                    <a href="#projects" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#skills" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="mailto:ritika.nbrc@gmail.com" class="px-6 py-2.5 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/30 transition-all transform hover:-translate-y-0.5">Let's Connect</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Animated Background Blobs -->
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
+                
+                <!-- Text Content -->
+                <div class="flex-1 text-center md:text-left pt-10 md:pt-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-blue-700 uppercase bg-white/80 backdrop-blur-sm rounded-full border border-blue-100 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                        Manager @ IIT Ropar-TBIF
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1] font-serif">
+                        Ritika <br/><span class="text-gradient">Mahajan</span>
+                    </h1>
+                    
+                    <!-- REPLACED: Static Text instead of Flashing Typewriter -->
+                    <!-- <p class="text-xl md:text-2xl text-slate-600 font-light mb-8 flex justify-center md:justify-start items-center">
+                        I am a <span class="font-semibold text-slate-900 ml-2">MedTech Innovator & Ecosystem Builder.</span>
+                    </p> -->
+                    
+                    <p class="text-slate-600 mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed text-lg font-medium">
+                        Engineer | MedTech & DeepTech Innovator.<br/>
+                        <span class="text-slate-500 font-normal">Translating Research into Scalable Products & Partnerships. An interdisciplinary technologist transitioning into impact roles.</span>
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#experience" class="px-8 py-4 rounded-full bg-slate-900 text-white font-medium hover:bg-blue-600 transition-all shadow-xl shadow-slate-900/20 hover:shadow-blue-500/30 hover:-translate-y-1">
+                            Explore Career
+                        </a>
+                        <a href="https://www.linkedin.com/in/ritika-mahajan-8b6996285" target="_blank" class="px-8 py-4 rounded-full bg-white/80 backdrop-blur-sm text-slate-900 border border-slate-200 font-medium hover:bg-white transition-all shadow-sm hover:shadow-md hover:-translate-y-1 flex items-center justify-center gap-2 group">
+                            <i class="fab fa-linkedin text-blue-600 group-hover:scale-110 transition-transform"></i> LinkedIn
+                        </a>
+                    </div>
+                    
+                    <!-- Stats Grid -->
+                    <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-slate-200/60 pt-8">
+                        <div>
+                            <p class="text-3xl font-bold text-slate-900 font-serif">10.0</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">CGPA (Gold Medalist)</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-slate-900 font-serif">2x</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">GATE Qualified</p>
+                        </div>
+                        <div class="hidden md:block">
+                            <p class="text-3xl font-bold text-slate-900 font-serif">6+</p>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">Yrs Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="flex-1 relative" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="relative w-80 h-80 md:w-[28rem] md:h-[28rem] mx-auto perspective-1000">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-indigo-100 rounded-[2rem] blur-2xl opacity-60 transform rotate-6"></div>
+                        <!-- Profile Image Container -->
+                        <div class="relative w-full h-full rounded-[50rem] overflow-hidden border-8 border-white shadow-2xl transform transition-transform duration-500 hover:scale-[1.02]">
+                            <img src="profile.png" alt="Ritika Mahajan" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <!-- Floating Glass Badges -->
+                        <div class="absolute top-8 -right-8 glass-card p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
+                                    <i class="fas fa-lightbulb text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase">Focus</p>
+                                    <p class="font-bold text-slate-900">Innovation</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-8 -left-8 glass-card p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 4s;">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-users text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase">Current Role</p>
+                                    <p class="font-bold text-slate-900">Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-24 bg-slate-50 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] opacity-40"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-widest text-blue-600 uppercase mb-3">Professional Journey</h2>
+                <h3 class="text-4xl font-serif font-bold text-slate-900">Work Experience</h3>
+            </div>
+
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-6 md:left-1/2 h-full w-0.5 bg-gradient-to-b from-blue-200 via-purple-200 to-slate-200 -translate-x-1/2 md:translate-x-0"></div>
+
+                <!-- Job 1 -->
+                <div class="relative md:flex items-center justify-between mb-12 group">
+                    <div class="md:w-[45%] mb-8 md:mb-0 md:text-right" data-aos="fade-right">
+                        <div class="glass-card p-6 rounded-2xl hover:shadow-lg transition-all duration-300 border-l-4 border-l-blue-600 md:border-l-0 md:border-r-4 md:border-r-blue-600">
+                            <h4 class="text-xl font-bold text-slate-900">Manager</h4>
+                            <p class="text-blue-600 font-semibold mb-2">Technology Business Incubator Foundation | IIT Ropar</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Supporting startups from ideation to scale through compliance, mentoring, investor connect, and funding access. Managed grants, CSR programs, startup outreach, and ecosystem partnerships.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full border-4 border-white shadow-lg flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-briefcase text-white text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-[45%] pl-16 md:pl-10" data-aos="fade-left">
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-slate-900 text-xs font-bold shadow-sm border border-slate-100">Dec 2023 - Present</span>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative md:flex items-center justify-between mb-12 flex-row-reverse group">
+                    <div class="md:w-[45%] mb-8 md:mb-0" data-aos="fade-left">
+                        <div class="glass-card p-6 rounded-2xl hover:shadow-lg transition-all duration-300 border-l-4 border-l-indigo-500">
+                            <h4 class="text-xl font-bold text-slate-900">MedTech Fellow</h4>
+                            <p class="text-indigo-600 font-semibold mb-2">Centre for Innovation & Bio-Design | PGIMER</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Supported translational biomedical research, prototype development, regulatory alignment, and clinical validation. Facilitated collaboration among clinicians and engineers.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-white rounded-full border-4 border-indigo-500 shadow-lg flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-heartbeat text-indigo-600 text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-[45%] pl-16 md:pr-10 md:text-right" data-aos="fade-right">
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-slate-900 text-xs font-bold shadow-sm border border-slate-100">Mar 2022 - Dec 2023</span>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative md:flex items-center justify-between mb-12 group">
+                    <div class="md:w-[45%] mb-8 md:mb-0 md:text-right" data-aos="fade-right">
+                        <div class="glass-card p-6 rounded-2xl hover:shadow-lg transition-all duration-300 border-l-4 border-l-purple-600 md:border-l-0 md:border-r-4 md:border-r-purple-600">
+                            <h4 class="text-xl font-bold text-slate-900">Neuro Image Analyst</h4>
+                            <p class="text-purple-600 font-semibold mb-2">National Brain Research Centre | Manesar</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Analyzed neuroimaging and EEG/ERP data using biomedical signal and image processing techniques (MATLAB, Python, Brainstorm). Conducted source localization studies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-white rounded-full border-4 border-purple-500 shadow-lg flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-brain text-purple-600 text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-[45%] pl-16 md:pl-10" data-aos="fade-left">
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-slate-900 text-xs font-bold shadow-sm border border-slate-100">Oct 2021 - Feb 2022</span>
+                    </div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="relative md:flex items-center justify-between mb-12 flex-row-reverse group">
+                    <div class="md:w-[45%] mb-8 md:mb-0" data-aos="fade-left">
+                        <div class="glass-card p-6 rounded-2xl hover:shadow-lg transition-all duration-300 border-l-4 border-l-teal-500">
+                            <h4 class="text-xl font-bold text-slate-900">Research Intern</h4>
+                            <p class="text-teal-600 font-semibold mb-2">INMAS, DRDO | Delhi</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Contributed to defense research projects in the VE-CARE Lab. Assisted in experimental studies, data analysis, and technical documentation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-white rounded-full border-4 border-teal-500 shadow-lg flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-shield-alt text-teal-600 text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-[45%] pl-16 md:pr-10 md:text-right" data-aos="fade-right">
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-slate-900 text-xs font-bold shadow-sm border border-slate-100">Jul 2019 - Jun 2020</span>
+                    </div>
+                </div>
+                
+                 <!-- Job 5 -->
+                 <div class="relative md:flex items-center justify-between group">
+                    <div class="md:w-[45%] mb-8 md:mb-0 md:text-right" data-aos="fade-right">
+                        <div class="glass-card p-6 rounded-2xl hover:shadow-lg transition-all duration-300 border-l-4 border-l-amber-500 md:border-l-0 md:border-r-4 md:border-r-amber-500">
+                            <h4 class="text-xl font-bold text-slate-900">Lecturer</h4>
+                            <p class="text-amber-600 font-semibold mb-2">Vaishno College of Engineering</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Taught Diploma and B.Tech students in Electronics & Communication. Mentored students and guided technical projects.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-white rounded-full border-4 border-amber-500 shadow-lg flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-chalkboard-teacher text-amber-600 text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-[45%] pl-16 md:pl-10" data-aos="fade-left">
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-slate-900 text-xs font-bold shadow-sm border border-slate-100">Aug 2016 - Jul 2018</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section (New) -->
+    <section id="education" class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-widest text-blue-600 uppercase mb-3">Academic Foundation</h2>
+                <h3 class="text-4xl font-serif font-bold text-slate-900">Education</h3>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Master's -->
+                <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-yellow-500 shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold text-slate-900">M.Tech in Biomedical Engineering</h4>
+                            <p class="text-slate-600 font-medium">NIT, Kurukshetra</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 text-right">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full font-bold">2018 - 2020</span>
+                            <div class="text-slate-900 font-bold mt-1">CGPA 10.0</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm"><i class="fas fa-medal text-yellow-500 mr-2"></i> <strong>Gold Medalist</strong> & Best Paper Presentation Award.</p>
+                </div>
+
+                <!-- Bachelor's -->
+                <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900">B.Tech in Electronics & Communication</h4>
+                            <p class="text-slate-600 font-medium">H.P.T.U, Hamirpur</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 text-right">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-bold">2012 - 2016</span>
+                            <div class="text-slate-900 font-bold mt-1">80%</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm"><i class="fas fa-award text-blue-500 mr-2"></i> Secured 6th position in the University.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Projects -->
+    <section id="projects" class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-widest text-blue-600 uppercase mb-3">Portfolio</h2>
+                <h3 class="text-4xl font-serif font-bold text-slate-900">Featured Projects</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xl shadow-lg shadow-blue-500/30">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span class="bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wide">Robotics</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">Android Controlled Robot</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Designed an Arduino Uno based android controlled robot equipped with ultrasound sensors for real-time obstacle detection and navigation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center text-xl shadow-lg shadow-purple-500/30">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <span class="bg-purple-50 text-purple-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wide">Neuroscience</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">Cognitive Enhancement</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Investigated cognitive enhancement techniques using Binaural Beats, Classical Music, and Transcranial Direct Current Stimulation (tDCS).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-xl shadow-lg shadow-indigo-500/30">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span class="bg-indigo-50 text-indigo-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wide">Signal Proc.</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">Source Localization</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Analyzed Event Related Potentials (ERP), Brain Connectivity, and source localization using the Stroop Task paradigm.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-teal-50 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-xl shadow-lg shadow-teal-500/30">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <span class="bg-teal-50 text-teal-700 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wide">MedTech</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Digital Stethoscope</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Conducted a qualitative comparison study between conventional stethoscopes and electronic (e-stethoscope) prototypes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Skills Banner -->
+    <section id="skills" class="py-16 bg-white text-slate-900 relative overflow-hidden border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-2xl font-serif font-bold text-center mb-10">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
+                <div class="skill-item p-2">
+                    <i class="fab fa-python text-3xl mb-2 text-yellow-500"></i>
+                    <p class="text-sm font-medium">Python</p>
+                </div>
+                <div class="skill-item p-2">
+                    <i class="fas fa-wave-square text-3xl mb-2 text-blue-600"></i>
+                    <p class="text-sm font-medium">MATLAB</p>
+                </div>
+                 <div class="skill-item p-2">
+                    <i class="fas fa-microchip text-3xl mb-2 text-teal-500"></i>
+                    <p class="text-sm font-medium">Arduino/8051</p>
+                </div>
+                <div class="skill-item p-2">
+                    <i class="fas fa-code text-3xl mb-2 text-orange-500"></i>
+                    <p class="text-sm font-medium">HTML</p>
+                </div>
+                <div class="skill-item p-2">
+                    <i class="fas fa-satellite-dish text-3xl mb-2 text-indigo-500"></i>
+                    <p class="text-sm font-medium">HFSS</p>
+                </div>
+                 <div class="skill-item p-2">
+                    <i class="fas fa-plug text-3xl mb-2 text-red-500"></i>
+                    <p class="text-sm font-medium">PSpice</p>
+                </div>
+                <div class="skill-item p-2">
+                    <i class="fas fa-bolt text-3xl mb-2 text-yellow-500"></i>
+                    <p class="text-sm font-medium">Brainstorm</p>
+                </div>
+                 <div class="skill-item p-2">
+                    <i class="fas fa-brain text-3xl mb-2 text-pink-500"></i>
+                    <p class="text-sm font-medium">EEGLAB</p>
+                </div>
+                 <div class="skill-item p-2">
+                    <i class="fas fa-layer-group text-3xl mb-2 text-green-500"></i>
+                    <p class="text-sm font-medium">Keil</p>
+                </div>
+                 <div class="skill-item p-2">
+                    <i class="fas fa-chart-line text-3xl mb-2 text-purple-500"></i>
+                    <p class="text-sm font-medium">Deep Learning</p>
+                </div>
+                 <div class="skill-item p-2">
+                    <i class="fas fa-volume-up text-3xl mb-2 text-cyan-500"></i>
+                    <p class="text-sm font-medium">Audacity</p>
+                </div>
+                <div class="skill-item p-2">
+                    <i class="fas fa-rocket text-3xl mb-2 text-rose-500"></i>
+                    <p class="text-sm font-medium">Startups</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Publications -->
+    <section id="publications" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-12 text-center">Publications & Research</h2>
+            
+            <div class="space-y-6">
+                <!-- Paper 1 -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-400 transition-all duration-300 hover:shadow-md transform hover:-translate-x-1" data-aos="fade-up">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-sm">01</div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">Does single session binaural beats effect executive functioning in Healthy adults?</h3>
+                            <p class="text-sm text-slate-500 mt-2 italic">Published in "Proceedings of the International Conference on Paradigms of Computing, Communication and Data Sciences"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-200 hover:border-purple-400 transition-all duration-300 hover:shadow-md transform hover:-translate-x-1" data-aos="fade-up" data-aos-delay="50">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-sm">02</div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">The effect of binaural auditory beats on electroencephalography power and mood</h3>
+                            <p class="text-sm text-slate-500 mt-2 italic">Presented in NCET 2019 | DOI:16.10089.IJMTE Spl.2019.V9111.19.29205</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 3 -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-400 transition-all duration-300 hover:shadow-md transform hover:-translate-x-1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-sm">03</div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">Effect of beta frequency binaural beats on cognitive control in healthy adults</h3>
+                            <p class="text-sm text-slate-500 mt-2 italic">Published in book "Lecture Notes in Networks and Systems"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications -->
+    <section id="achievements" class="py-24 bg-slate-50 relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-16">
+                
+                <!-- Achievements List -->
+                <div data-aos="fade-right">
+                    <h2 class="text-2xl font-serif font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <span class="w-8 h-1 bg-blue-600 rounded-full"></span> Honors & Awards
+                    </h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 shadow-sm">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div>
+                                <strong class="text-slate-900 block text-lg">Gold Medalist in M.Tech</strong>
+                                <span class="text-sm text-slate-600">NIT Kurukshetra (CGPA 10.0)</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shadow-sm">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <strong class="text-slate-900 block text-lg">Qualified GATE</strong>
+                                <span class="text-sm text-slate-600">2016 & 2022</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 shadow-sm">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <strong class="text-slate-900 block text-lg">Best Paper Presentation</strong>
+                                <span class="text-sm text-slate-600">M.Tech Award</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 shadow-sm">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div>
+                                <strong class="text-slate-900 block text-lg">Speaker, IEEE WIE</strong>
+                                <span class="text-sm text-slate-600">Virtual Talk Series 2020</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shadow-sm">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <strong class="text-slate-900 block text-lg">Exam Qualifications</strong>
+                                <span class="text-sm text-slate-600">SSC, AFCAT, BSNL TTA</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Certifications List -->
+                <div data-aos="fade-left">
+                    <h2 class="text-2xl font-serif font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <span class="w-8 h-1 bg-teal-500 rounded-full"></span> Certifications
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="group p-5 bg-white rounded-xl border border-slate-200 hover:border-teal-500 hover:shadow-md transition-all">
+                            <h4 class="font-bold text-slate-900 group-hover:text-teal-600 transition-colors">StartUp India Learning Program</h4>
+                            <p class="text-xs text-slate-500 mt-1">Issued Dec 2022 | Credential ID 64433435</p>
+                        </div>
+                        <div class="group p-5 bg-white rounded-xl border border-slate-200 hover:border-teal-500 hover:shadow-md transition-all">
+                            <h4 class="font-bold text-slate-900 group-hover:text-teal-600 transition-colors">Introduction to Programming with MATLAB</h4>
+                            <p class="text-xs text-slate-500 mt-1">Vanderbilt University | Issued Jul 2021</p>
+                        </div>
+                        <div class="group p-5 bg-white rounded-xl border border-slate-200 hover:border-teal-500 hover:shadow-md transition-all">
+                            <h4 class="font-bold text-slate-900 group-hover:text-teal-600 transition-colors">FDP on AI and Machine Learning</h4>
+                            <p class="text-xs text-slate-500 mt-1">E&ICT, IIT Roorkee | Issued Dec 2018</p>
+                        </div>
+                        <div class="group p-5 bg-white rounded-xl border border-slate-200 hover:border-teal-500 hover:shadow-md transition-all">
+                            <h4 class="font-bold text-slate-900 group-hover:text-teal-600 transition-colors">HFSS Training</h4>
+                            <p class="text-xs text-slate-500 mt-1">NITTTR Chandigarh | Issued Jan 2017</p>
+                        </div>
+                        <div class="group p-5 bg-white rounded-xl border border-slate-200 hover:border-teal-500 hover:shadow-md transition-all">
+                            <h4 class="font-bold text-slate-900 group-hover:text-teal-600 transition-colors">Switching and transmission</h4>
+                            <p class="text-xs text-slate-500 mt-1">BSNL Public Limited | Issued Jan 2015</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Footer -->
+    <footer class="bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200">
+        <!-- Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-purple-100/50 blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 py-20 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-slate-900">Let's Build Something Impactful</h2>
+            <p class="text-slate-600 text-lg mb-10 max-w-xl mx-auto">
+                Open to collaborations in DeepTech, MedTech Innovation, and Startup Ecosystem building.
+            </p>
+            <p class="text-slate-500 text-sm mb-10">IIT Ropar, India</p>
+            <div class="flex justify-center gap-6">
+                <a href="mailto:ritika.nbrc@gmail.com" class="px-8 py-4 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all shadow-lg hover:shadow-blue-500/50">
+                    <i class="fas fa-envelope mr-2"></i> Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/ritika-mahajan-8b6996285" target="_blank" class="px-8 py-4 rounded-full bg-white text-slate-900 font-bold border border-slate-200 hover:bg-slate-50 transition-all shadow-sm">
+                    <i class="fab fa-linkedin mr-2 text-blue-600"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-xl translate-y-20 opacity-0 transition-all duration-300 hover:bg-blue-700 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Scroll Progress & Back to Top
+        window.onscroll = function() {
+            // Progress Bar
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+
+            // Back to Top Button
+            const btn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.classList.remove("translate-y-20", "opacity-0");
+            } else {
+                btn.classList.add("translate-y-20", "opacity-0");
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
